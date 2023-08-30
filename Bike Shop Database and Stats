@@ -1,0 +1,28 @@
+--Create a store database
+
+CREATE TABLE bikeshop (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, color TEXT, price INTEGER);
+
+INSERT INTO bikeshop VALUES (1, "YODA", 2, "green", 18800.00);
+INSERT INTO bikeshop VALUES (2, "Litespeed", 5, "red", 15500.00);
+INSERT INTO bikeshop VALUES (3, "Blueberry", 1, "blue", 12000.00);
+INSERT INTO bikeshop VALUES (4, "Pepsi", 3, "brown", 11800.00);
+INSERT INTO bikeshop VALUES (5, "Racer", 2, "yellow", 10500.00);
+INSERT INTO bikeshop VALUES (6, "Ghost", 5, "white", 8500.00);
+INSERT INTO bikeshop VALUES (7, "Apple", 2, "red", 6200.00);  
+INSERT INTO bikeshop VALUES (8, "Clementine", 6, "orange", 3000.00);
+INSERT INTO bikeshop VALUES (9, "Sport", 7, "grey", 5000.00);
+INSERT INTO bikeshop VALUES (10, "Potato", 4, "tan", 2825.00);
+INSERT INTO bikeshop VALUES (11, "Cruiser", 2, "yellow", 1900.00);
+INSERT INTO bikeshop VALUES (12, "Stealth", 8, "black", 860.00);
+INSERT INTO bikeshop VALUES (13, "Fighter", 11, "yellow", 625.00);
+INSERT INTO bikeshop VALUES (14, "Raven", 6, "purple", 480.00);
+INSERT INTO bikeshop VALUES (15, "Flash", 3, "red", 150.00);
+
+--display the database ordered by price.
+Select * FROM bikeshop
+ORDER BY PRICE asc;
+
+--what is the sum quantity of red bikes?
+Select Sum (quantity)
+FROM bikeshop
+WHERE color = 'red';
